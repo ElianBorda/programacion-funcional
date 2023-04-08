@@ -14,16 +14,17 @@ chocoHelate consH = consH Chocolate
 
 *determinar el tipo de las siguientes expresiones:*
 
-a. Vasito
-b. Chocolate
-c. Cucurucho
-d. Sambayon
-e. Pote
-f. chocoHelate
-g. chocoHelate Vasito
-h. chocoHelate Cucurucho
-i. chocoHelate (Cucurucho Sambayon)
-j. chocoHelate (chocoHelate Cucurucho)
-k. chocoHelate (Vasito DulceDeLeche)
-l. chocoHelate Pote
-m. chocoHelate (chocoHelate (Pote Frutilla))
+
+1. Vasito
+2. Chocolate
+3. Cucurucho
+4. Sambayon
+5. Pote
+6. chocoHelate
+7. chocoHelate Vasito
+8. chocoHelate Cucurucho
+9. chocoHelate (Cucurucho Sambayon)
+10. chocoHelate (chocoHelate Cucurucho)
+11. chocoHelate (Vasito DulceDeLeche)
+12. chocoHelate Pote
+13. chocoHelate (chocoHelate (Pote Frutilla))
