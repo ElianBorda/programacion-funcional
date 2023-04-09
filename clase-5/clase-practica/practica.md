@@ -122,7 +122,6 @@ _Solucion:_
     ```
 
 2. 
-
     ```haskell
     ddOfInt :: Int -> DigDec
     ddOfInt 0 = D0
