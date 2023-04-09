@@ -164,3 +164,12 @@ data Medida = Mm Float | Cm Float
 |  **Cm**  | 10    | 1     | 0.394 | 0.033 |
 | **Inch** | 25.4  | 2.54  | 1     | 0.083 |
 | **Foot** | 304.8 | 30.48 | 12    | 1     |
+
+*escribir las siguientes funciones:*
+1. `asMm :: Medida -> Medida`, que dada una medida cualquiera la transforma en una medida en milímetros que aproxima la dada según la conversión establecida.
+
+2. `asCm :: Medida -> Medida`, que dada una medida cualquiera la transforma en una medida en centímetros que aproxima la dada según la conversión establecida.
+
+3. `asInch :: Medida -> Medida`, que dada una medida cualquiera la transforma en una medida en pulgadas que aproxima la dada según la conversión establecida.
+
+4. `asFoot :: Medida -> Medida`, que dada una medida cualquiera la transforma en una medida en pies que aproxima la dada según la conversión establecida.
