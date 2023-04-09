@@ -173,3 +173,14 @@ data Medida = Mm Float | Cm Float
 3. `asInch :: Medida -> Medida`, que dada una medida cualquiera la transforma en una medida en pulgadas que aproxima la dada según la conversión establecida.
 
 4. `asFoot :: Medida -> Medida`, que dada una medida cualquiera la transforma en una medida en pies que aproxima la dada según la conversión establecida.
+
+_Solucion:_
+
+1. 
+```haskell 
+asMm :: Medida -> Medida
+asMm (Cm f)   = Mm (f*10)
+asMm (Inch f) = Mm (f*25.4)
+asMm (Foot f) = Mm (f*304.8)
+asMm (Mm f)   = Mm f
+```
