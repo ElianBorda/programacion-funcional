@@ -149,3 +149,7 @@ _Solucion:_
     prevDD D0 = error "No tiene anterior"
     prevDD d = ddOfInt ((ddAsInt d)-1)
     ```
+
+| Hola | Como |
+|------|------|
+| jaja | jaja |
