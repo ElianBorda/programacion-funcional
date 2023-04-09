@@ -53,37 +53,53 @@ data DigBin = O | I
 ```
 
 *definir las siguientes funciones:*
-1. `dbAsInt::DigBin->Int`, que dado un símbolo que representa un dígito binario lo transforma en su significado como número.
-2. `dbAsBool::DigBin->Bool`, que dado un símbolo que representa un dígito binario lo transforma en su significado como booleano
-3. `dbOfBool::Bool->DigBin` ,que dado un booleano lo transforma en el símbolo que representa a ese booleano.
-4. `negDB::DigBin->DigBin`, que dado un dígito binario lo transforma en el otro.
+1. `dbAsInt :: DigBin -> Int`, que dado un símbolo que representa un dígito binario lo transforma en su significado como número.
+2. `dbAsBool :: DigBin -> Bool`, que dado un símbolo que representa un dígito binario lo transforma en su significado como booleano
+3. `dbOfBool :: Bool -> DigBin` ,que dado un booleano lo transforma en el símbolo que representa a ese booleano.
+4. `negDB :: DigBin -> DigBin`, que dado un dígito binario lo transforma en el otro.
 
 _Solucion:_
 
 1. 
     ```haskell
-    dbAsInt::DigBin->Int
+    dbAsInt :: DigBin -> Int
     dbAsInt I = 1
     dbAsInt O = 0
     ```
 
 2. 
     ```haskell
-    dbAsBool::DigBin->Bool
+    dbAsBool :: DigBin -> Bool
     dbAsBool I = True
     dbAsBool O = False
     ```
 
 3. 
     ```haskell
-    dbOfBool::Bool->DigBin
+    dbOfBool :: Bool -> DigBin
     dbOfBool True  = I
     dbOfBool False = O
     ```
 
 4. 
     ```haskell
-    negDB::DigBin->DigBin
+    negDB :: DigBin -> DigBin
     negDB I = O
     negDB O = I
     ```
+
+
+**Ejercicio 3**
+
+*Dado el siguiente tipo que pretende representar dígitosdecimales*
+
+```haskell
+data DigDec = D0 | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9
+```
+
+*definir las siguientes funciones:*
+
+1. `ddAsInt :: DigDec -> Int`, que dado un símbolo que representa un dígito decimal lo transforma en su significado como número.
+2. `ddOfInt :: Int -> DigDec`, que dado un número entre 0 y 9 lo transforma en el símbolo que representa a ese dígito.
+3. `nextDD :: DigDec -> DigDec`, que dado un dígito decimal lo transforma en el siguiente según el orden circular dado en la definición.
+4. `prevDD :: DigDec -> DigDec`, que dado un dígito decimal lo transforma en el anterior según el orden circular dado en la definición.
