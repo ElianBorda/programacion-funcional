@@ -92,13 +92,12 @@ _Solucion:_
 **Ejercicio 3**
 
 *Dado el siguiente tipo que pretende representar dígitosdecimales*
-
 ```haskell
-data DigDec = D0 | D1 | D2 | D3 | D4 | D5 | D6 | D7 | D8 | D9
+data DigDec = D0 | D1 | D2 | D3 | D4 
+            | D5 | D6 | D7 | D8 | D9
 ```
 
 *definir las siguientes funciones:*
-
 1. `ddAsInt :: DigDec -> Int`, que dado un símbolo que representa un dígito decimal lo transforma en su significado como número.
 2. `ddOfInt :: Int -> DigDec`, que dado un número entre 0 y 9 lo transforma en el símbolo que representa a ese dígito.
 3. `nextDD :: DigDec -> DigDec`, que dado un dígito decimal lo transforma en el siguiente según el orden circular dado en la definición.
@@ -150,6 +149,18 @@ _Solucion:_
     prevDD d = ddOfInt ((ddAsInt d)-1)
     ```
 
-| Hola | Como |
-|------|------|
-| jaja | jaja |
+**Ejercicio 4**
+
+*Dado el siguiente tipo que representa medidas en un software de dibujo como LibreOffice Draw.*
+```haskell
+data Medida = Mm Float | Cm Float 
+            | Inch Float | Foot Float
+```
+
+*y la siguiente tabla de conversión*
+|          | **Mm**    | **Cm**    | **Inch**  | **Foot**  |
+|------|-------|-------|-------|-------|
+|  **Mm**  | 1     | 0.1   | 0.039 | 0.003 |
+|  **Cm**  | 10    | 1     | 0.394 | 0.033 |
+| **Inch** | 25.4  | 2.54  | 1     | 0.083 |
+| **Foot** | 304.8 | 30.48 | 12    | 1     |
