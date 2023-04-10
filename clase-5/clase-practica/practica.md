@@ -235,9 +235,20 @@ construyeShNormal c = c 1.0
 
 _Solucion:_
 
-Esto es un subrayado sencillo _
-
-1.
+*Defiiciones: *
 ```haskell
+uncurry :: (a -> b -> c) ->(a, b) -> c
+flip :: (b -> a -> c) -> a -> b -> c
+compose :: (b -> c) -> (a -> b) -> a -> c
+swap:: (a, b) -> (b, a)
+```
+
+1. 
+```haskell 
 uncurry Rect :: (Float, Float) -> Shape
+```
+
+2. 
+```haskell
+
 ```
