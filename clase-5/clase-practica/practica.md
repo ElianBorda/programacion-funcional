@@ -184,3 +184,30 @@ asMm (Inch f) = Mm (f*25.4)
 asMm (Foot f) = Mm (f*304.8)
 asMm (Mm f)   = Mm f
 ```
+
+2. 
+```haskell 
+asCm :: Medida -> Medida
+asCm (Mm f)   = Cm (f*0.1)
+asCm (Inch f) = Cm (f*2.54)
+asCm (Foot f) = Cm (f*30.48)
+asCm (Cm f)   = Cm f
+```
+
+3. 
+```haskell 
+asInch :: Medida -> Medida
+asInch (Mm f)   = Inch (f*0.039)
+asInch (Cm f)   = Inch (f*0.394)
+asInch (Foot f) = Inch (f*12)
+asInch (Inch f) = Inch f
+```
+
+4. 
+```haskell
+asFoot :: Medida -> Medida
+asFoot (Mm f)   = Foot (f*0.003)
+asFoot (Cm f)   = Foot (f*0.033)
+asFoot (Inch f) = Foot (f*0.083)
+asFoot (Foot f) = Foot f
+```
