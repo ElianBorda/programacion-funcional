@@ -212,7 +212,6 @@ asFoot (Inch f) = Foot (f*0.083)
 asFoot (Foot f) = Foot f
 ```
 
-
 **Ejercicio 5**
 
 *Dadas las siguientes definiciones:*
@@ -225,11 +224,11 @@ construyeShNormal c = c 1.0
 
 *Determinar el tipo de las siguientes expresiones:*
 
-1. uncurry Rect
-2. construyeShNormal (flip Rect 5.0)
-3. compose (uncurry Rect) swap
-4. uncurry Cucurucho
-5. uncurry Rect swap
-6. compose uncurry Pote
-7. compose Just
-8. compose uncurry (Pote Chocolate)
+1. `uncurry Rect` 
+2. `construyeShNormal (flip Rect 5.0)` 
+3. `compose (uncurry Rect) swap` 
+4. `uncurry Cucurucho` 
+5. `uncurry Rect swap` 
+6. `compose uncurry Pote` 
+7. `compose Just` 
+8. `compose uncurry (Pote Chocolate)` 
