@@ -232,3 +232,12 @@ construyeShNormal c = c 1.0
 6. `compose uncurry Pote` 
 7. `compose Just` 
 8. `compose uncurry (Pote Chocolate)` 
+
+_Solucion:_
+
+Esto es un subrayado sencillo _
+
+1.
+```haskell
+uncurry Rect :: (Float, Float) -> Shape
+```
