@@ -263,4 +263,7 @@ compose uncurry Pote :: Gusto -> ((Gusto, Gusto) -> Helado)
 compose Just :: (a' -> a) -> a' -> Maybe
 ```
 
-
+8. 
+```haskell
+compose uncurry (Pote Chocolate) :: ¿Tiene tipo?
+```
