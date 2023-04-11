@@ -267,4 +267,17 @@ uncurry Cucurucho :: (Gusto, Gusto) -> Helado
 5. 
 ```haskell
 uncurry Rect swap :: (Gusto, Gusto) -> Helado
+6. 
+```haskell
+compose uncurry Pote :: Gusto -> ((Gusto, Gusto) -> Helado)
+```
+
+7. 
+```haskell
+compose Just :: (a' -> a) -> a' -> Maybe
+```
+
+8. 
+```haskell
+compose uncurry (Pote Chocolate) :: ¿Tiene tipo?
 ```
