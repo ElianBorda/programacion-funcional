@@ -252,3 +252,15 @@ uncurry Rect :: (Float, Float) -> Shape
 ```haskell
 
 ```
+
+6. 
+```haskell
+compose uncurry Pote :: Gusto -> ((Gusto, Gusto) -> Helado)
+```
+
+7. 
+```haskell
+compose Just :: (a' -> a) -> a' -> Maybe
+```
+
+
