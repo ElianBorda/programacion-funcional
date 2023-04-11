@@ -267,6 +267,8 @@ uncurry Cucurucho :: (Gusto, Gusto) -> Helado
 5. 
 ```haskell
 uncurry Rect swap :: (Gusto, Gusto) -> Helado
+```
+
 6. 
 ```haskell
 compose uncurry Pote :: Gusto -> ((Gusto, Gusto) -> Helado)
