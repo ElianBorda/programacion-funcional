@@ -241,6 +241,7 @@ uncurry :: (a -> b -> c) ->(a, b) -> c
 flip :: (b -> a -> c) -> a -> b -> c
 compose :: (b -> c) -> (a -> b) -> a -> c
 swap:: (a, b) -> (b, a)
+Rect :: Float -> (Float -> Shape)
 ```
 
 1. 
@@ -250,5 +251,20 @@ uncurry Rect :: (Float, Float) -> Shape
 
 2. 
 ```haskell
+construyeShNormal (flip Rect 5.0) :: Shape
+```
 
+3. 
+```haskell
+compose (uncurry Rect) swap :: (Float, Float) -> Shape
+```
+
+4. 
+```haskell
+uncurry Cucurucho :: (Gusto, Gusto) -> Helado
+```
+
+5. 
+```haskell
+uncurry Rect swap :: (Gusto, Gusto) -> Helado
 ```
