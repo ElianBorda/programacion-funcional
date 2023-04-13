@@ -1,6 +1,6 @@
 # Practica
 
-## Ejercicio 1
+### Ejercicio 1
 
 *Dadas las siguientes definiciones*
 ```haskell
@@ -45,7 +45,7 @@ _Solucion:_
 **En duda**: ¿Helado debe recibir el los dos gustos de primeras, o no pasa nada si recibe de a uno?
 
 
-## Ejercicio 2
+### Ejercicio 2
 
 *Dado el siguiente tipo que pretende representar dígitos binarios*
 ```haskell
@@ -89,7 +89,7 @@ _Solucion:_
     ```
 
 
-## Ejercicio 3
+### Ejercicio 3
 
 *Dado el siguiente tipo que pretende representar dígitosdecimales*
 ```haskell
@@ -149,7 +149,7 @@ _Solucion:_
     prevDD d = ddOfInt ((ddAsInt d)-1)
     ```
 
-## Ejercicio 4
+### Ejercicio 4
 
 *Dado el siguiente tipo que representa medidas en un software de dibujo como LibreOffice Draw.*
 ```haskell
@@ -212,7 +212,7 @@ asFoot (Inch f) = Foot (f*0.083)
 asFoot (Foot f) = Foot f
 ```
 
-## Ejercicio 5 
+### Ejercicio 5 
 
 *Dadas las siguientes definiciones:*
 ```haskell
@@ -284,7 +284,7 @@ compose Just :: (a' -> a) -> a' -> Maybe
 compose uncurry (Pote Chocolate) :: ¿Tiene tipo?
 ```
 
-## Ejercicio 6
+### Ejercicio 6
 
 *Para cada una de las expresiones del ejercicio anterior que denoten funciones, construir una expresión aplicándola.*
 
@@ -303,7 +303,7 @@ fff f1 f2 = compose (uncurry Rect) swap (f1, f2)
 ```
 
 
-## Ejercicio 7
+### Ejercicio 7
 
 *Dado el tipo Set definido en la clase teórica*
 ```haskell
