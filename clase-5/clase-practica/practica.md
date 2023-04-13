@@ -283,3 +283,41 @@ compose Just :: (a' -> a) -> a' -> Maybe
 ```haskell
 compose uncurry (Pote Chocolate) :: ¿Tiene tipo?
 ```
+
+**Ejercicio 6**
+
+*Para cada una de las expresiones del ejercicio anterior que denoten funciones, construir una expresión aplicándola.*
+
+_Solucion:_
+
+1. 
+```haskell
+dispar :: Float -> Float -> Shape
+dispar f1 f2 = uncurry Rect (f1, f2)
+```
+
+2. 
+```haskell
+fff :: Float -> Float -> Shape
+fff f1 f2 = compose (uncurry Rect) swap (f1, f2) 
+```
+
+
+**Ejercicio 7**
+
+*Dado el tipo Set definido en la clase teórica*
+```haskell
+data Set a = S (a -> Bool)
+```
+
+*definir las siguientes funciones sobre él:*
+1. ``belongs :: Set a -> a -> Bool``, que dado un conjunto, describe la
+función que indica si un elemento dado pertenece a ese conjunto.
+2. ``empty :: Set a``, que describe el conjunto vacío.
+3. ``singleton :: a -> Set a``, que dado un elemento describe un conjunto
+que contiene a ese único elemento.
+4. ``union :: Set a -> Set a -> Set a``, que dados dos conjuntos,
+describe al conjunto que resulta de la unión de ambos.
+5. ``intersection :: Set a -> Set a -> Set a``, que dados dos
+conjuntos, describe al conjunto que resulta de la intersección de ambos.
+
