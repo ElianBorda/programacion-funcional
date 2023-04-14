@@ -321,3 +321,34 @@ describe al conjunto que resulta de la unión de ambos.
 5. ``intersection :: Set a -> Set a -> Set a``, que dados dos
 conjuntos, describe al conjunto que resulta de la intersección de ambos.
 
+_Solucion:_
+
+1. 
+```haskell
+belongs :: Set a -> a -> Bool
+belongs (S f) x = f x
+```
+
+2. 
+```haskell
+empty :: Set a
+empty = S (\n -> False)
+```
+
+3. 
+```haskell
+singleton :: a -> Set a
+singleton x = S (\y -> y==x) 
+```
+
+4. 
+```haskell
+union :: Set a -> Set a -> Set a
+union (S f1) (S f2)= S (\x -> (f1 x)&&(f2 x)) 
+```
+
+5. 
+```haskell
+intersection :: Set a -> Set a -> Set a
+intersection (S f1) (S f2)= S (\x -> (f1 x)||(f2 x)) 
+```
