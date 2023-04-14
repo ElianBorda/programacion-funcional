@@ -352,3 +352,43 @@ union (S f1) (S f2)= S (\x -> (f1 x)&&(f2 x))
 intersection :: Set a -> Set a -> Set a
 intersection (S f1) (S f2)= S (\x -> (f1 x)||(f2 x)) 
 ```
+
+
+### Ejercicio 8
+
+*Dados los siguientes tipos que modelan los posibles resultados de computar con excepciones*
+```haskell
+data MayFail a = Raise Exception | Ok a
+data Exception = DivByZero | NotFound | NullPointer
+               | Other String
+type ExHandler a = Exception -> a
+```
+
+*definir la función:*
+
+```haskell
+tryCatch :: MayFail a -> (a -> b) -> ExHandler b -> b
+```
+
+*que dada una computación que puede fallar, una función que indica cómo continuar si no falla, y un manejador de los casos de falla, expresa la computación completa.*
+
+*Un ejemplo que utiliza esta función sería el siguiente:* 
+```haskell
+sueldoGUIE :: Nombre -> [Empleado] -> GUI Int
+sueldoGUIE nombre empleados =
+    tryCatch (lookupE nombre empleados)
+              mostrarInt
+              (\e -> case e of
+                    NotFound -> ventanaError msgNotEmployee
+                    _        -> error msgUnexpected)
+    where msgNotEmployee = "No es empleado de la empresa"
+          msgUnexpected = "Error inesperado"
+```
+
+*sabiendo que*
+
+```haskell
+mostrarInt :: Int -> GUI Int
+ventanaError :: String -> GUI a
+lookupE :: Nombre -> [Empleado] -> MayFail Int
+```
