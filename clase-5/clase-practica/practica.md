@@ -392,3 +392,6 @@ mostrarInt :: Int -> GUI Int
 ventanaError :: String -> GUI a
 lookupE :: Nombre -> [Empleado] -> MayFail Int
 ```
+
+_Solucion:_
+
